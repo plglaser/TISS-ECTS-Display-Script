@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tiss ECTS Display
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  basic script to display ECTS at the top right corner
 // @author       Philipp-Lorenz Glaser
 // @match        https://tiss.tuwien.ac.at/education/favorites.*
