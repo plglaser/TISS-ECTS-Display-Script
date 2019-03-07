@@ -11,8 +11,6 @@
 
 (function() {
     'use strict';
-
-
     var $ = window.jQuery;
 
     var $certs1 = $("tr.ui-widget-content.ui-datatable-even > td.favoritesCert").has("span");
@@ -35,13 +33,19 @@
         ECTS += Number(pointA);
     }
 
+    var $tabs = $("td.ui-state-default.favoritesECTS");
+    var tabcount = $tabs.length;
+
+    var addedECTS = 0;
+    for(var m = 0; m < tabcount-1; m++){
+       addedECTS += Number($($tabs.get(m)).text());
+    }
+
     if (ECTS>0){
         $("h1").append('<div class="ects"><div>');
         $("div.ects").css("display", "inline-block");
         $("div.ects").css("float", "right");
-        $("div.ects").text("ECTS: "+ ECTS);
-
+        $("div.ects").text("ECTS: "+ ECTS + " / " + addedECTS);
     }
-
 
 })();
