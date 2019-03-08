@@ -34,6 +34,7 @@
     var ECTS = 0;
 
     for(var k = 0; k < $rows.length; k++){
+        $($rows[k]).find(".favoritesActionCol2").children("input").remove();
         var pointA = $($rows[k]).find("td.favoritesECTS").text();
         ECTS += Number(pointA);
     }
